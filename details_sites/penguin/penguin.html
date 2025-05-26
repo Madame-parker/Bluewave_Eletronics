@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinguin-Fakten: Zum Knuddeln, nicht zum Kochen!</title>
+  <link rel="stylesheet" href="penguin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>🐧 Pinguin-Fakten: Zum Knuddeln, nicht zum Kochen!</h1>
+  <button id="Backbutton" title="Go Backbutton">
+    Zurück zu Bluewave Electronics 🏠
+  </button>
+  <div class="facts">
+    <p>🌏 In der Geschichte aßen Seefahrer manchmal Pinguine, um zu überleben. Das Fleisch war fettig und kalorienreich – aber eher tranig im Geschmack.</p>
+    <p>⚖️ Heute stehen Pinguine unter strengem Artenschutz. In Deutschland ist der Verzehr illegal und strafbar.</p>
+    <p>🚑 Es gibt viele andere exotische Leckereien, aber lasst den Pinguinen bitte ihre Freiheit!</p>
+    <p>😮 Und Hand aufs Herz: Wer könnte diesem Gesicht widerstehen?</p>
+  </div>
+
+  <div class="gallery">
+    <img src="../../assets/cute-penguin-pictures-db5xlgzzm003wq3n.jpg" alt="sweety penguin" class="penguin-image">
+    <p> Jetzt mal ehrlich, wer will sowas niedliches denn essen ? 😮  </p>
+  </div>
+
+  <button id="dangerBtn">Wenn du ihn trotzdem essen möchtest, klick hier ❌</button>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>🚫 Stop!</h2>
+      <p>Pinguine sind geschützt! 🐧</p>
+      <p>Such dir lieber einen Pinguin-Plüschi 🤗</p>
+      <button id="closeBtn">Alles klar!</button>
+    </div>
+  </div>
+
+  <script>
+  const dangerBtn = document.getElementById("dangerBtn");
+  const modal = document.getElementById("modal");
+  const closeBtn = document.getElementById("closeBtn");
+
+  dangerBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+    document.getElementById("Backbutton").addEventListener("click", () => {
+    window.location.href = "../../landing/landingpage.html";
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+    color: #003366;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #004b8d;
+    margin-bottom: 1rem;
+ 
+}
+#Backbutton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(to top, #ffffff, #dff3ff);
+    color: #004b8d;
+    border: 2px solid #a6d5f7;
+    border-radius: 50px;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+}
+#Backbutton:hover {
+    background: #bce6ff;
+    color: #002244;
+    box-shadow: 0 0 15px rgba(100, 200, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.facts {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background: #f0faff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 75, 141, 0.1);
+}
+
+.facts p
+ {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+
+
+.penguin-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 75, 141, 0.2);
+    margin-top: 1rem;
+}
+
+#dangerBtn {
+    margin-top: 2rem;
+    background-color: #ff6666;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    }
+
+#dangerBtn:hover {
+    background-color: #cc0000;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 102, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-content {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px #00bfff99;
+    color: #003366;
+    animation: popIn 0.3s ease;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  
+  .modal-content p {
+    margin: 0.5rem 0;
+  }
+  
+  .modal-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0077aa;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }

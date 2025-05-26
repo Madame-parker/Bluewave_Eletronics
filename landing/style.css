@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(ellipse at center, #32c269 0%, #dac5c5 100%);
+ 
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 550px; /* Höhe begrenzen */
+    
+    box-sizing: border-box;
+  }
+
+#adminLoginBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00ffcc;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffcc80;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+  
+#adminLoginBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffcc;
+}
+  
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+    position: relative;
+    z-index: 0; /* Kontext erzeugen */
+    background: #101010;
+    border: 2px solid #00ffcc;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 50px;
+    box-shadow: 0 0 10px #00ffcc55;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #00ffccaa;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #ccfff9;
+  font-size: 1.4rem;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  color: #99fff0;
+}
+
+.card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  color: #0e0909;
+  background: #00ffcc;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  box-shadow: 0 0 10px #00ffcc55;
+}
+
+.card a:hover {
+  background: #00ccaa;
+}
+
+/* 🔥 Glitch Effekt */
+
+.glitch-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.glitch-glow {
+  content: '';
+  position: absolute; /*kann den link blockieren*/
+  pointer-events: none;/*deswegen dass hier mach das objekt trotzdem anklichbar*/
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(45deg, #00ffcc44, transparent);
+  filter: blur(10px);
+  opacity: 0.2;
+  animation: pulse 4s infinite;
+  z-index: 0;
+}
+
+.penguin-spotlight {
+  max-width: 400px; /* Begrenze die Breite, damit er nicht zu breit wird */
+  margin: 4rem auto 2rem auto; /* Abstand oben, zentriert, Abstand unten */
+  text-align: center; /* Text und Bild zentrieren */
+}
+
+.penguin-spotlight .penguin-img {
+    max-width: 100%; /* Bild innerhalb des Containers anpassen */
+    height: auto;
+    border-radius: 10px; /* Abgerundete Ecken für das Bild */
+    margin-top: 1rem;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.7); /* Leuchtender Schatten für das Bild */
+}
+
+.footer {
+    height: 60px;
+    background: #0a0a0a;
+    color: #00ffcc;
+    border-top: 1px solid #003322;
+    box-shadow: 0 -2px 10px #00ffcc33;
+    display: flex;
+    margin-top: 300px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+  }
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}  
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.03);
+  }
+}
+
+.card * {
+
+  z-index: 1;
+}

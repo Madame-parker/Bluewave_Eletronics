@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin – Produkte verwalten</title>
+  <link rel="stylesheet" href="e.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>🛠️ Produktverwaltung</h1>
+
+    <form id="productForm">
+      <label for="name">Produktname</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="description">Beschreibung</label>
+      <input type="text" id="description" name="description" required>
+
+      <label for="availability">Verfügbarkeit</label>
+      <input type="text" id="availability" name="availability" required placeholder="z.B. '10 Stück'">
+
+      <label for="price">Preis (€)</label>
+      <input type="number" id="price" name="price" required step="0.01">
+
+      <button type="submit">Veränderungen speichern</button>
+    </form>
+
+    <div id="message"></div>
+  </div>
+
+  <script src="e.js"></script>
+</body>
+</html>

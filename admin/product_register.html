@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="products_r.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <h1>🛠️ Admin-Bereich</h1>
+
+  <button id="adminLogoutBtn" class="logout-btn" title="Admin Logout">
+    Abmelden
+  </button>
+
+  <div class="card-container">
+    <div class="card" onclick="window.location.href='functions/append/append_product.html'">
+      <h2>➕ Produkt hinzufügen</h2>
+      <p>Lege ein neues Produkt im System an.</p>
+    </div>
+    <div class="card" onclick="window.location.href='functions/edit/edit.html'">
+      <h2>✏️ Produkt bearbeiten</h2>
+      <p>Bearbeite vorhandene Produktdaten.</p>
+    </div>
+    <div class="card" onclick="window.location.href='functions/delete/delete.html'">
+      <h2>🗑️ Produkt löschen</h2>
+      <p>Entferne ein bestehendes Produkt.</p>
+    </div>
+  </div>
+  <script>
+    document.getElementById("adminLogoutBtn").addEventListener("click", () => 
+    {
+    window.location.href = "../../../landing/landingpage.html";
+  });
+  </script>
+</body>
+</html>
